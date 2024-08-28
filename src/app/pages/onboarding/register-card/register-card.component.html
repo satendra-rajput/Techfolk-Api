@@ -1,0 +1,56 @@
+<section class="container-fuild">
+  <div class="container d-flex justify-content-center align-items-center m-auto">
+    <div class="col-lg-6">
+      <img src="assets/images/loginside.png" alt="">
+    </div>
+
+    <div class="col-lg-6 loginform shadow-lg">
+      <h3>Login to</h3>
+      <h2>Techfolk Solutions</h2>
+      <form class="p-3" [formGroup]="RegisterForm" (ngSubmit)="RegisterSubmit(RegisterForm); RegisterForm.reset()">
+
+        <div class="mb-3">
+          <label for="username" class="form-label">Enter Your Name:</label>
+          <input type="text" class="form-control" id="username" formControlName="username"
+            placeholder="Enter your name">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="mobile" class="form-label">Mobile Number:</label>
+          <input type="text" class="form-control" id="mobile" formControlName="mobile"
+            placeholder="Enter your mobile number">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address:</label>
+          <input type="email" class="form-control" id="email" formControlName="email"
+            placeholder="info@techfolkapi.com">
+        </div>
+
+
+        <div class="mb-3">
+          <label for="pass" class="form-label">Create Password:</label>
+          <input type="password" class="form-control" id="pass" formControlName="pass" placeholder="********">
+        </div>
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3" [disabled]="RegisterForm.invalid">Register</button>
+        </div>
+
+        <div class="col-lg-12 d-flex justify-content-center">
+          <hr>
+          <span>Account already Exit?</span>
+          <br>
+        </div>
+
+        <div class="col-lg-12">
+          <p class="movelink">
+            <a href="/login">Login</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

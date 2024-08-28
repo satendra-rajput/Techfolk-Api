@@ -1,0 +1,41 @@
+.container-fuild{
+    height: 100vh;
+    background: #3f51b5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginform{
+    width: 500px;
+    background-color: #fff;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
+
+.loginform h2{
+    color: #3f51b5;
+    font-weight: 800;
+}
+
+.forget>a{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.movelink{
+    display: flex;
+    padding: 10px 0px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    justify-content: center;
+    background: #6357db;
+    cursor: pointer;
+}
+
+.movelink a{
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+    color: #fff;
+}

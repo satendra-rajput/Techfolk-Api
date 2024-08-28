@@ -1,0 +1,52 @@
+<section class="container-fuild">
+  <div class="container d-flex justify-content-center align-items-center m-auto">
+    <div class="col-lg-6">
+      <img src="assets/images/loginside.png" alt="">
+    </div>
+
+    <div class="col-lg-6 loginform shadow-lg">
+      <h3>Login to</h3>
+      <h2>Techfolk Solutions</h2>
+      <form class="p-3" [formGroup]="loginForm" (ngSubmit)="LoginSubmit(loginForm); loginForm.reset()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" formControlName="email"
+            placeholder="info@techfolkapi.com">
+        </div>
+
+        <div class="mb-3">
+          <label for="pass" class="form-label">Password</label>
+          <input type="password" class="form-control" id="pass" formControlName="pass" placeholder="********">
+        </div>
+
+
+        <div class="mb-3 form-check">
+
+          <input type="checkbox" class="form-check-input" id="checkbox" formControlName="checkbox">
+          <label class="form-check-label" for="checkbox">Remember me</label>
+
+          <div class="forget form-check float-right" style="float: inline-end;">
+            <a href="">Forget password</a>
+          </div>
+        </div>
+
+
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3" [disabled]="loginForm.invalid">Login</button>
+        </div>
+
+        <div class="col-lg-12 d-flex justify-content-center">
+          <hr>
+          <span>Don't an account?</span>
+          <br>
+        </div>
+
+        <div class="col-lg-12">
+          <p class="movelink">
+            <a routerLink="/register">Create Account</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

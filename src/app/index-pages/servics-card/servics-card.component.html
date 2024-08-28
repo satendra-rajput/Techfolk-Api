@@ -1,0 +1,20 @@
+<section>
+    <div class="row">
+      <!-- <h2 class="section-heading">Our Services</h2> -->
+    </div>
+    <div class="row">
+        @for (items of services; track $index) {
+            <div class="column">
+                <div class="card">
+                  <div class="icon-wrapper">
+                   <img [src]="items.icons" [alt]="items.heading">
+                  </div>
+                  <h3>{{items.heading}}</h3>
+                  <p>
+                   {{items.para}}
+                  </p>
+                </div>
+              </div>
+        }
+    </div>
+  </section>
